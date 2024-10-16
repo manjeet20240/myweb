@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #clock
+    {
+        color:yellow;
+        font-size: 50px;
+        font-family: arial black;
+        text-shadow: 5px 5px 5px rgb(9,8,8);
+    }
+</style>
+<body>
+    <h1>Set Alarm</h1>
+    <div id="clock">Time</div>
+
+    <audio controls id="mysound" style="display: none;">
+
+        <source src="audio\h1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+
+        var s = document.getElementById("mysound")
+        var c = document.getElementById("clock")
+
+    function show()
+    {
+        var d = new Date()
+        c.innerHTML = d.toLocaleTimeString()
+    }
+
+    var t1 = setInterval("show()",1000)
+
+    show()
+
+    function f1()
+
+    {
+        document.bgColor = "green"
+        s.play()
+        alert("Its a Tea Time Now ...")
+        s.pause();
+    }
+
+    var t = setTimeout("f1()",5000)
+
+    var b = document.createElement("button")
+    document.body.appendChild(b)
+    b.style.padding="10px"
+    b.style.color="white"
+    b.style.background="teal"
+    b.style.cursor="pointer"
+    b.innerHTML="Stop Timer"
+    b.onclick = function()
+    {
+        clearTimeout(t)
+        alert("Timer is stoped")
+    }
+    </script>
+</body>
+</html>

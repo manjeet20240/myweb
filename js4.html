@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js4</title>
+</head>
+<style>
+.pic
+ {
+    width: 150px;
+    box-shadow: 10px 10px 10px gray;
+    transition: 0.50s;
+}
+.text
+{
+    font-size: 15px;
+    text-align: justify;
+    padding: 40px;
+    transition: 0.40s;
+}
+</style>
+<body>
+    <h1 style="text-align: center">Gameing World</h1>
+    <div style="text-align: right;margin: 40px;">
+        <input type="color" id="mycolor">
+    </div>
+    <div style="margin: auto; text-align: center;width: 400px;height:200px;border: 0px black solid">
+        <img id="mypic" src="images/game.jpg" class="pic">
+        <br/>
+        <input id="slider" value="100" type="range" min="100" max="600">
+
+    </div>
+    <h1>Welcome Gameing World </h1>
+    <input id="textslider" value="15" type="range" min="15" max="50">
+
+    <p id="data" class="text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quisquam dolor itaque voluptates soluta saepe, aut repudiandae velit? Quos beatae molestias iusto hic architecto odio possimus deserunt, numquam repudiandae et.
+        Voluptates totam, ab eos dolorem in quia ut perferendis, mollitia maiores laboriosam earum quae, aperiam voluptatum dolorum id ea obcaecati officiis deleniti dicta cumque dignissimos nesciunt aliquam adipisci ipsum. Neque.
+        Nemo et mollitia assumenda esse sunt nesciunt, molestiae corrupti earum. Harum quas aliquid consequuntur perspiciatis mollitia distinctio, illum cumque, cupiditate enim vel excepturi debitis nisi earum minima aperiam quia omnis.
+        Vitae repellat aspernatur porro animi quaerat odio nisi dolorum laudantium temporibus voluptates unde, fugiat dicta ut dolores tenetur sunt dignissimos eos soluta neque necessitatibus doloribus maiores! Voluptatum corporis cupiditate accusamus.
+        Commodi, quam? Blanditiis totam consequuntur modi sapiente? Eos, fugit magnam sit neque assumenda provident earum tempore voluptatem. Vitae delectus vel quaerat officiis sequi doloribus voluptate libero eos ratione dolorem. Repellat!
+        Nisi illum ad aperiam eveniet magni voluptatum facere incidunt, eius a eum optio aliquam facilis quod dolores iusto ipsum libero suscipit nulla tenetur deserunt porro nihil praesentium alias? Maiores, veritatis.
+        Consectetur voluptatum vel, odit libero dignissimos inventore maxime aliquam ad iste voluptas. Neque iusto eum maxime earum suscipit, error quis libero totam dolore non, consequatur quia reiciendis cum quas mollitia.
+        Quam perferendis, esse eaque quasi reiciendis aliquid quaerat illo voluptates ipsa iusto aspernatur enim aperiam laudantium eligendi dolorem tenetur. Mollitia incidunt, officia ea quos maiores minima magni totam expedita! Quod.
+        Voluptatem corporis inventore, dignissimos, laboriosam voluptate provident eum eveniet obcaecati magnam accusamus, temporibus nostrum alias eligendi quisquam autem ad labore in! Voluptate explicabo modi dignissimos fugiat rerum maiores illo suscipit.
+        Quae quibusdam odit sapiente eveniet nisi esse nemo consequuntur vitae, magni impedit qui quidem fugit sunt voluptas possimus fugiat beatae deserunt veniam perferendis quaerat odio eos. Error odio repudiandae veniam.
+
+    </p>
+    <script>
+        var p = document.getElementById("mypic")
+        var s = document.getElementById("slider")
+        var ts = document.getElementById("textslider")
+        var d = document.getElementById("data")
+        var c = document.getElementById("mycolor")
+
+        s.onchange = function()
+        {
+          p.style.width= this.value+"px"  
+        }
+
+        ts.onchange = function()
+        {
+            //document.title = this.value
+            d.style.fontSize=this.value+"px"
+        }
+        c.onchange = function()
+        {
+            document.body.style.background = this.value
+        }
+</script>
+      
+
+
+    </script>
+</body>
+</html>

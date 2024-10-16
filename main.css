@@ -1,0 +1,25 @@
+body{background:white;}
+
+#box{
+	width:50%;
+	
+	background:#f0f5f5;
+	margin:auto;
+	margin-top:2%;
+	padding:6%;
+	border-radius:6%;
+	box-shadow:10px 10px 10px gray;
+}
+
+table
+{
+	width:100%;
+	
+}
+
+#box input[type="text"],input[type="password"]{color:gray;height:20px;border-radius:px;font-size:100%;}
+
+#box lable{font-size:100%;}
+
+#box input[type="submit"],input[type="reset"]{width:40%;margin-left:5px;}
+

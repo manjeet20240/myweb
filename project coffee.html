@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee shop</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: : border-box;
+    scroll-behavior : smooth;
+    scroll-padding-top: 3rem;
+    font-family: var(--font-family-2);
+}
+
+body{
+    color: var();
+    background:#f9f6f2;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+section{
+    padding: 3rem 0 2rem;
+}
+.container{
+    max-width: 1060px;
+    margin:auto;
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #060413;
+    padding: 17px 20px;
+    border-radius: 2rem;
+}
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #f8e4be;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+.navbar a:hover{
+    background: red;
+    border-radius:10px;
+}
+.nav-link{
+    font-size: 0.88rem;
+    color: white;
+    font-family:playfair display;
+}
+.nav-link:hover{
+    color: white;
+    transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.nav-icons{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.nav-icons .bx{
+    color: #f9f6f2;
+    font-size: 20px;
+}
+
+.home{
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.home-text h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #54372a;
+}
+.home-text p{
+    max-width: 300px;
+    font-size: 0.94rem;
+    font-family: Poppins;
+    margin: 1rem 0 1.5rem;
+}
+.btn{
+    max-width: 160px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    border-radius: 2rem;
+    background: #060413;
+}
+.btn span{
+    font-family: Poppins;
+    color: #f9f6f2;
+    text-transform: uppercase;
+}
+
+.btn .bx{
+    font-size: 20px;
+    background: #df582e;
+    color: #f9f6f2;
+    padding: 5px;
+    border-radius: 50%;
+    transform: rotate(60deg);
+}
+.home-img{
+    max-width: 560px;
+    width: 100%;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+}
+
+.heading h2{
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+    
+.service-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(auto, 160px));
+    justify-content: space-between;
+    gap:1rem;
+}
+
+.ser-box{
+    background: #54372a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 35px 20px;
+    border-radius: 2rem;
+}
+.ser-box img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.ser-box p {
+    color: #f8e4be;
+
+}
+.heading p{
+    max-width: 550px;
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: Poppins;
+    margin-top: 1rem;
+
+}
+.Product-content{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: space-between;
+    gap: 2rem;
+    background: #e8d8cd;
+    border-radius: 1.5rem;
+    padding: 40px 60px;
+}
+.product-box{
+    background: #fff8f7;
+    padding: 20px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.product-box .heart-icon{
+    position: absolute;
+    top:20px;
+    left:20px;
+    padding: 8px;
+    background: #fff8f7;
+    color: #df582e;
+    border-radius: 50%;
+}
+.Product-box img {
+    margin-top: 1.5rem;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.Product-box p{
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-family: Poppins;
+    padding: 2px 7px;
+    border: 1px solid #94908e;
+    border-radius: 1rem;
+    background: #fff8f7;
+    margin: 1rem 0 0.5rem;
+    
+}
+.product-box h2{
+    color: #54372a;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.product-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+}
+.product-info span{
+    color: #54372a;
+}
+.product-info .bx {
+    padding: 8px;
+    background: #df582e;
+    color:#f9f6f2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.product-info .bx:hover{
+    background: #54372a;
+    transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.team-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px, auto));
+    gap: 1.5rem;
+}
+
+.team-box img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;  
+}
+
+.team-box h2 {
+    font-size: 0.94rem;
+    font-weight: 500;
+    color: #54372a;
+    font-family: sans-serif;
+    margin-top: 1rem;
+}
+
+.team-box span{
+    font-size: 0.77rem ;
+    color: #94908;
+    font-family: Poppins;
+}
+
+.team-box p{
+  font-size: 0.88rem;
+  font-family: Poppins;
+  color: #94908;  
+  margin-top: 10px;
+}
+
+.review{
+    max-width: 550px;
+    margin: auto;
+    width: 100%;   
+}
+.review-box{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   margin-bottom: 3.5rem !important; 
+}
+
+.review-box img{
+    width: 100px;
+    height: 100px;
+    border: 7px solid #fff8f7;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, 0.1);
+}
+
+.review-box h2 {
+    font-size: 1rem;
+    color: #54372a;
+    font-family: Poppins;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.review-box span{
+   font-size: 1.4rem;
+   font-weight: 700;
+   color: #54372a; 
+}
+
+.review-box p{
+    font-size: 0.9rem;
+    font-family: poppins;
+    columns: #94908e;
+    margin-top: 1rem;
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f9f6f2;
+    padding: 40px 20px;
+    position: relative;
+}
+.book-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    z-index: -1;
+}
+.book-overlay{
+    content: ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0,0,0.6);
+    border-radius: 1rem;
+    z-index: -1;
+}
+.book-data{
+    margin-top: 4rem;
+}
+.book-data h2{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.book-data form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9f6f2;
+    border-radius: 2rem;
+    padding: 2px 10px;
+    margin: 1rem 0;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+}
+.input-box .bx {
+    color: #060413;   
+}
+.input-box input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    background: transparent;
+}
+.book-btn{
+    text-align: center;
+    font-family: poppins;
+    font-size: 0.8rem;
+    padding: 10px 14px;
+    background: #54372a;
+    color: #f9f6f2;
+    border-radius: 2.5rem;
+}
+.book-btn:hover{
+    background: #df582e;
+    transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.book-data p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem !important;
+}
+.footer .logo{
+    color: #54372a;
+    margin-bottom: 1rem;
+}
+.social{
+  display:flex;
+  align-items: center; 
+  margin-top: 1rem; 
+}
+.social a{
+   font-size: 24px;
+   color: #54372a; 
+   margin-right: 1rem;
+}
+.social a :hover{
+    color: #df582e;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+}
+.footer-box h3{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a{
+    color: #54372a;
+    margin-bottom: 10px;
+}
+.Copyright{
+    padding: 30px;
+    color: #54372a;
+    text-align: center;
+}
+
+/* menu Ican */
+.menu-ican {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transform: 0.3s;
+}
+.menu-ican div{
+    display: block;
+    background: #f9f6f2;
+    height: 2px;
+    width: 23px;
+    transition: 0.3s;
+}
+
+/* Media quari */
+@media(max-width: 1080px){
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+.home-text h1{
+    font-size: 3rem;
+}
+.Product-content{
+    grid-template-columns: repeat(3,1fr);
+    padding: 40px;
+}
+}
+@media(max-width:875px) {
+    selection {
+        padding: 2rem 0;
+    }
+    .home-text h1 {
+        font: size 2.5rem;
+    }
+}
+@media(max-width:770px){
+    .home {
+        min-height: 500px;
+        grid-template-columns: 1fr;
+        margin-top: 4.5rem !important;
+    }
+.home-text{
+    order: 1;
+}
+.heading h2, 
+.book-data h2 {
+    font-size: 1.6rem;
+}
+.Product-content {
+    grid-template-columns: repeat(2, 1fr);
+}
+.book {
+    padding: 20px;
+}
+.book-data{
+    margin-top: 3rem;
+    max-width: 350px;
+    width: 100%;
+ }
+ .book-data form {
+    display: grid;
+    padding: 15px;
+    border-radius: 10px;
+ }
+ .input-box{
+    border-bottom: 1px solid #94908e;
+ }
+ .footer{
+    grid-template-columns: repeat(3, auto);
+ }
+}
+@media(max-width:700px){
+    header {
+        top: 15px;
+    }
+    .nav{
+        padding: 14px 20px;
+    }
+.logo {
+    font-size: 1.25rem;
+}
+
+    
+    
+.open-menu{
+    clip-path: polygon(0 0,100% 100%, 0% 100%);
+    transition: 0.5s all cubic-bezier(0.75, 0.82, 0.165, 1);
+}
+.nav-link{
+    display: block;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width:500px){
+    .heading h2 br{
+        display: contents;
+    }
+    .service-content {
+        justify-content: center;
+    }
+    .Product-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:380px){
+    .service-content{
+        grid-template-columns: repeat(auto-fit, minmax(auto,140px));
+    }
+    .ser-box img {
+        width: 80px;
+        height: 80px;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .heading h2,
+    .book-data h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+</style>
+<body>
+    <!--header start-->
+    <header>
+        <!--nav-->
+        <div class="nav container">
+            <!--  logo  -->
+              <a href="#" class="logo">Q.cafe</a>
+              <!-- Navbar -->
+            <div class="navbar">               
+                <a href="#home" class="nav-link">Home</a>
+               <a href="#services" class="nav-link">Services</a>
+               <a href="#Products" class="nav-link">Products</a>
+               <a href="#team" class="nav-link">Team</a>
+               <a href="#Review" class="nav-link">Reviews</a>
+            </div>
+            <!-- Nav Icons -->
+             <div class="nav-icons">
+                <a href="#"><i class="bx bx-user"></i></a>
+                <a href="#"><i class="bx bx-shopping-bag"></i></a>
+            <!--Nav Icans -->
+            <div class="nav-icons">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> 
+            </div>
+        </div>
+    </header>
+    <!--home-->
+    <section class="home container" id="home">
+        <div class="home-text">
+            <h1>Enjoy a new blend<br/>
+                of Coffee beans
+            </h1>
+            <p>Brew or order a perfect coffee based on your mood Anywhere Anytime</p>
+            <a href="#" class="btn">
+                <span>Shop Now</span>
+                <i class="bx bx-up-arrow-alt" ></i>
+            </a>
+        </div>
+        <!--Home image-->
+        <img src="images/hero.png" alt="image" class="home-img" />
+    </section>
+<!-- services  -->
+ <section class="services container" id="services">
+    <!--heading-->
+    <div class="heading">
+        <h2>Blending culture, coffee & top <br/>
+        notch services
+        </h2>
+        </div>
+        <div class="service-content">
+            <div class="ser-box">
+                <img src="images/ser-1.png" alt="">
+                <p>Equiment</p>
+            </div>
+            <div class="ser-box">
+                <img src="images/ser-2.png" alt="">
+                <p>Type Of Coffee</p>
+            </div>
+            <div class="ser-box">
+                <img src="images/ser-3.png" alt="">
+                <p>Take A Way</p>
+            </div>
+            <div class="ser-box">
+                <img src="images/ser-4.png" alt="">
+                <p>Beans Varient</p>
+            </div>
+            <div class="ser-box">
+                <img src="images/ser-5.png" alt="">
+                <p>Pastry</p>
+            </div>
+        
+    </div>
+
+ </section>
+ <!--Products -->
+ <section class="Products container" id="Products">
+    <!--heading-->
+    <div class="heading">
+        <h2> Our Selling Products</h2>
+        <p> It takes a lot of heart and hard work at every step to create the best 
+            coffee possible, and we know it takes a lot of grit to keep your own grind going.
+        </p>
+    </div>
+    <!--Products content-->
+    <div class="Product-content">
+        <!--box 1-->
+        <div class="Product-box">
+            <i class="bx bx-heart heart-ican"></i>
+            <img src="images/product-1.png" alt="">
+            <p>4 Type Availble</p>
+            <h2>Instant Coffee</h2>
+            <div class="product-info">
+                <span>$50</span>
+                <i class="bx bx-shopping-bag"></i>
+            </div>
+        </div>
+        <!--box 2-->
+        <div class="Product-box">
+            <i class="bx bx-heart heart-ican"></i>
+            <img src="images/product-2.png" alt="">
+            <p>4 Type Availble</p>
+            <h2>Black Coffee</h2>
+            <div class="product-info">
+                <span>$50</span>
+                <i class="bx bx-shopping-bag"></i>
+            </div>
+        </div>
+        <!--box 3-->
+        <div class="Product-box">
+            <i class="bx bx-heart heart-ican"></i>
+            <img src="images/product-3.png" alt="">
+            <p>4 Type Availble</p>
+            <h2>Latte</h2>
+            <div class="product-info">
+                <span>$500</span>
+                <i class="bx bx-shopping-bag"></i>
+            </div>
+        </div>
+        <!--box 4-->
+        <div class="Product-box">
+            <i class="bx bx-heart heart-ican"></i>
+            <img src="images/product-4.png" alt="">
+            <p>4 Type Availble</p>
+            <h2>Cappuccino</h2>
+            <div class="product-info">
+                <span>$50</span>
+                <i class="bx bx-shopping-bag"></i>
+            </div>
+        </div>
+        <!--box 5-->
+        <div class="Product-box">
+            <i class="bx bx-heart heart-ican"></i>
+            <img src="images/product-5.png" alt="">
+            <p>4 Type Availble</p>
+            <h2>Expresso</h2>
+            <div class="product-info">
+                <span>$30</span>
+                <i class="bx bx-shopping-bag"></i>
+            </div>
+        </div>
+        <!--box 6-->
+        <div class="Product-box">
+            <i class="bx bx-heart heart-ican"></i>
+            <img src="images/product-6.png" alt="">
+            <p>4 Type Availble</p>
+            <h2>Mocha</h2>
+            <div class="product-info">
+                <span>$60</span>
+                <i class="bx bx-shopping-bag"></i>
+            </div>
+        </div>
+    </div>
+ </section>
+
+
+<!--     My Team     -->
+<section class="team container" id="team">
+    <div class="heading">
+        <h2>Meet Our Experts</h2>
+    </div>
+    <!--  Team Content -->
+      <div class="team-content">
+        <div class="team-box">
+            <img src="images/team-3.png" alt="">
+            <h2>Sara Zones</h2>
+            <span>Co- Lead chef</span>
+            <p>As a roaster we search the world over to establish relationships
+                with great farmers cultivating great coffees,</p>
+        </div>
+
+        <div class="team-content">
+            <div class="team-box">
+                <img src="images/team-1.png" alt="">
+                <h2>Sara Zones</h2>
+                <span>Co- Lead chef</span>
+                <p>As a roaster we search the world over to establish relationships
+                    with great farmers cultivating great coffees,</p>
+            </div>
+            <div class="team-content">
+                <div class="team-box">
+                    <img src="images/team-3.png" alt="">
+                    <h2>Sara Zones</h2>
+                    <span>Co- Lead chef</span>
+                    <p>As a roaster we search the world over to establish relationships
+                        with great farmers cultivating great coffees,</p>
+                </div>
+      </div>
+</section>
+	
+<!-- Review -->
+ 
+<section class="Review container" id="Review">
+    <div class="heading">
+        <h2>Customer's Reviews</h2>
+    </div>
+<!-- Swiper -->
+<div class="Swiper myswiper">
+    <div class="Swiper-wrapper">
+        <!--Slider 1 -->
+        <div class="swiper-slide">
+            <div class="review-box">
+                <img src="images/review-1.jpg" alt="">
+                <h2>Jonas Blue</h2>
+                <span>The taste of coffee is Stunning, <br/>
+                subtle and smooth flavor.
+                </span>
+            <p>
+                The taste of coffee can vary depending on the type of bean,
+                roast level, and brewing method used. Some people prefer a 
+                strong and bold taste, while others prefer a more subtle and
+                smooth flavor.
+            </p>
+            </div>
+        </div>
+       
+        <div class="swiper-slide">
+            <div class="review-box">
+                <img src="images/review-2.jpg" alt="">
+                <h2>Jonas Blue</h2>
+                <span>The taste of coffee is Stunning, <br/>
+                subtle and smooth flavor.
+                </span>
+            <p>
+                The taste of coffee can vary depending on the type of bean,
+                roast level, and brewing method used. Some people prefer a 
+                strong and bold taste, while others prefer a more subtle and
+                smooth flavor.
+            </p>
+            </div>
+        </div>
+        
+        <div class="swiper-slide">
+            <div class="review-box">
+                <img src="images/review-3.jpg" alt="">
+                <h2>Jonas Blue</h2>
+                <span>The taste of coffee is Stunning, <br/>
+                subtle and smooth flavor.
+                </span>
+            <p>
+                The taste of coffee can vary depending on the type of bean,
+                roast level, and brewing method used. Some people prefer a 
+                strong and bold taste, while others prefer a more subtle and
+                smooth flavor.
+            </p>
+            </div>
+        </div>
+         
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+</section>
+
+<!--Book-->
+<section class="book container" id="book">
+    <img src="images/book.jpg" alt="" class="book-img">
+    <div class="book-overlay"></div>
+    <div class="book-data">
+        <h2>Let's book a Table <br/> For you</h2>
+        <form action="book">
+            <div class="input-box">
+                <i class="bx bx-phone-call"></i>
+                <input type="tel" name="" placeholder="Your Number" id="">
+            </div>
+            <div class="input-box">
+                <i class="bx bx-user"></i>
+                <input type="number" name="" placeholder="people" id="">
+            </div>
+            <a href="#" class="book-btn">Book Table</a>
+        </form>
+        <p>We will contact you to confirm your booking</p>
+    </div>
+</section>
+
+<!-- footer -->
+
+<section class="footer container">
+    <div class="footer-box">
+        <a href="#" class="logo">Q.Cafe</a>
+
+        <div class="social">
+        <a href="#"><i class='bx bxl-twitch'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+    </div>
+    <div class="footer-box">
+        <h3>About</h3>
+        <a href="#">Our Story</a>
+        <a href="#">FAQ</a>
+        <a href="#">Careers</a>
+    </div>
+    <div class="footer-box">
+        <h3>Customer's Recourses</h3>
+        <a href="#">Menu</a>
+        <a href="#">Location</a>
+        <a href="#">Support</a>
+    </div>
+    <div class="footer-box">
+        <h3>Services</h3>
+        <a href="#">Payment Options</a>
+        <a href="#">Refunds & Exchanges</a>
+        <a href="#">Limitation Of Liability</a>
+    </div>
+
+</section>
+
+<!-- Copyright -->
+ <p class="Copyright">&#169; Q.CAFE</p>
+		
+</body>
+</html>

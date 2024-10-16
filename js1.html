@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .picstyle
+    {
+        border-top: 12px green rideg;
+        transition: 0.50s ease-in;
+        cursor: pointer;
+        width: 200px;
+        height: 450px;
+        margin-left: 300px;
+    }
+    h1{
+        text-align: center;
+        color: red;
+    }
+</style>
+<body>
+    <h1>First JS Class</h1>
+    <script>
+
+        var mypic = document.createElement("img")
+        document.body.appendChild(mypic)
+        mypic.src="images/hero.png"
+        mypic.style="border-radius:20px;margin:50px;"
+        mypic.style.width="50%"
+        mypic.style.boxShadow="10px 10px 10px gray"
+        mypic.classList.add("picstyle")
+
+        /* Handling Event */
+        mypic.onclick=function()
+        {
+        mypic.src="images/ser-1.png"
+        }
+        mypic.onmouseover = function()
+        {
+            this.style.transform = "scale(1)"
+            mypic.src="images/hero.png"
+        }
+
+
+        
+
+        document.title = "Ready"
+    </script>
+
+
+</body>
+</html>

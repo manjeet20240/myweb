@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{width: 0%;}
+    td{width: 30%;}
+    input[type="text"]{text-align: center;}
+</style>
+<body>
+    <h1>JavaScript Sheet</h1>
+
+    <table border="1" cellpadding="1">
+        <form action="">
+            <script>
+                    var r = 1
+
+                document.write("<th>Roll No</th>")
+                document.write("<th>Name</th>")
+                document.write("<th>Age</th>")
+                document.write("<th>Address</th>")
+                document.write("<th>City</th>")
+
+                while(r<=5)
+                {
+                    document.write("<tr>")
+                    
+                    for(var c =1; c<=5; c++) {
+
+                        document.write("<td><input type='text'></td>")
+                    }
+
+                    document.write("</tr>")
+                    r++
+                }
+                document.title = "No Error"
+            </script>
+                <input type="submit" value="Save">
+            <input type="reset" value="Clear Sheet">
+        </form>
+    </table>
+</body>
+</html>

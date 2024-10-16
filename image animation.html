@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+</head>
+<style>
+
+    *{
+        transition: 0.50s;
+    }
+    .imgstyle
+    {
+        box-shadow: 10px 10px 10px rgb(230, 127, 127);
+        cursor: pointer;
+        border-radius: 20px;
+        width: 300px;
+		height: 200px;
+    }
+</style>
+<body>
+  <h1>
+    Image Animation
+  </h1> 
+  <img id="img1"src="images\f3.png"class="imgstyle">
+  <h2 id="about">About</h2>
+  <p id="para1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae, officia vel totam facilis earum nam quidem et repellat vero incidunt eveniet rem molestiae adipisci at neque veniam illo ut.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae, officia vel totam facilis earum nam quidem et repellat vero incidunt eveniet rem molestiae adipisci at neque veniam illo ut.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae, officia vel totam facilis earum nam quidem et repellat vero incidunt eveniet rem molestiae adipisci at neque veniam illo ut.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae, officia vel totam facilis earum nam quidem et repellat vero incidunt eveniet rem molestiae adipisci at neque veniam illo ut.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae, officia vel totam facilis earum nam quidem et repellat vero incidunt eveniet rem molestiae adipisci at neque veniam illo ut.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae, officia vel totam facilis earum nam quidem et repellat vero incidunt eveniet rem molestiae adipisci at neque veniam illo ut.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae, officia vel totam facilis earum nam quidem et repellat vero incidunt eveniet rem molestiae adipisci at neque veniam illo ut.
+
+  </p>
+  <script>
+    var myp = document.getElementById("img1")
+    var mp = document.getElementById("para1")
+    myp.style.border="4px cyan ridge"
+    myp.style.margin="120px"
+    mp.style.border="2px black solid"
+    mp.style.padding="40px"
+    mp.onclick = function()
+    {
+        mp.style="padding:40px;font-family:verdana; box-shadow:10px 10px gray;"
+        mp.style.cursor="pointer"
+        this.style.background="white"
+        mp.style.color="black"
+    }
+    mp.onmouseout = function()
+    {
+        mp.style="padding:1px;font-family:verdana; box-shadow:0px  0px 0px gray; color:black;background:white;"
+
+        mp.style.border="2px black solid"
+        mp.style.padding="40px"
+    }
+    var a=document.getElementById("about")
+    a.onmouseover=function()
+    {
+      this.style.color="red"
+      this.style.cursor="pointer"
+      this.style.fontsize="50px"  
+    }
+
+    a.onmouseout=function()
+    {
+        this.style.color="black"
+      this.style.cursor="pointer"
+      this.style.fontsize=""
+    }
+    
+    myp.onwheel=function(event)
+    {
+        if(event.deltay==100)
+    {
+        this.style.transform="scale(2)"
+    }
+        if(event.deltay==-100)
+    {
+        this.style.transform="scale(1)"
+    }
+    }
+    myp.ondblclick=function()
+    {
+        this.src="images\f3.png"
+    }
+    myp.onclick=function()
+    {
+        this.src="images\f4.png"
+    }
+
+    myp.onmousemove=function()
+    {
+        myp.style.borderRadius="100px"
+    }
+    myp.onmouseout=function()
+    {
+        myp.style.borderRadius="0px"
+    }
+  </script>
+</body>
+</html>

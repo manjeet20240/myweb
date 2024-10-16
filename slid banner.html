@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html>
+<head><title>Banner</title>
+<meta name="viewport" content="width=device-width,inital-scale=1.0">
+</head>
+
+<style>
+
+@keyframes runbanner
+{
+10%{left:0%;}
+20%{left:0%;}
+
+30%{left:-19%;}
+40%{left:-19%;}
+
+50%{left:-38%;}
+60%{left:-38%;}
+
+70%{left:-57%;}
+80%{left:-57%;}
+
+90%{left:-76%;}
+100%{left:-76%;}
+
+}
+#banner
+{
+width:550%;
+height:550px;
+box-shadow:10px 10px 10px gray;
+}
+
+.pic
+{
+position:relative;
+width:19%;
+height:550px;
+margin:-2px;
+animation:runbanner 15s ease-out infinite alternate;
+}
+
+
+@media only screen and (min-width:600px)
+
+{
+	#Banner{
+				height:150px;
+				}
+			.pic{
+					height:150px;
+				}
+				
+	@media only screen and (min-width:768px)
+	{
+	#banner{		
+				height:250px;
+				}
+	.pic{
+			height:250px;
+			}
+}
+@media only screen and (min-width:1200px)
+{
+	#banner{height:550px;}
+	
+	.pic{height:550px;}
+	
+}
+
+
+
+	</style>
+	
+	<body>
+<div id="banner">
+
+	<img src="images/dg1.jpg"class="pic">
+	<img src="images/dg2.jpg"class="pic">
+	<img src="images/dg6.jpg"class="pic">
+	<img src="images/dg4.jpg"class="pic">
+	<img src="images/dg5.jpg"class="pic">
+	</div>
+	
+</body>
+
+</html>
+	
+	
+	
+	
+	

@@ -1,0 +1,96 @@
+<doctype html>
+<html>
+
+<head>
+<title>From</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<style>
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+
+	#box{width:85%;}
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) 
+{
+	
+	#box{width:80%;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+{
+	
+	#box{width:50%;}
+	background:(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) 
+{
+	
+	#box{width:30%;}
+	background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+}
+
+</style>
+
+<body style="background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+		url('images/book.jpg');">
+<div id="box">
+<form action="http://tataplay/user/get.php" method="post">
+<table border="0" cellpadding="10">
+<caption style="color:black;font-size:40px"><b>Registration Form </b></caption>
+
+<tr><td><label>First Name</label></td><td><input type="text" Title="First name" pattern="[A-Za-z]{40}+" required></td></tr>
+
+<tr><td><label>Last Name</label></td><td><input type="text" Title="Last name" pattern="[A-Za-z]{40}+" required></td></tr>
+
+<tr><td><label>Age</label></td><td><input type="Number" Title="Age" min="18" max="40" required></td></tr>
+
+<tr><td><label>E-mail</label></td><td><input type="email" required></td></tr>
+
+
+
+
+
+<tr><td><label>D.O.B</label></td><td><input type="date" required></td></tr>
+
+<tr><td><label>Mobile No.</label></td><td><input type="number" required></td></tr>
+
+
+
+
+
+
+
+<tr><td><label>Gender</label></td>
+<td>
+Male<input type="radio" name="gender" value="Male"required>
+Female<input type="radio" name="gender" value="Female"required>
+Others<input type="radio" name="gender" value="Others"required>
+</td>
+</tr>
+
+<tr><td></td><td><input type="submit" value="Register"><input type="reset"></td></tr>
+
+
+
+</form>
+</div>
+
+
+
+
+
+
+</body>
+
+</html>

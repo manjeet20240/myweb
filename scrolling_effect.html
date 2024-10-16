@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+        cursor: pointer;
+        transition: 1.50s ease-in-out;
+        box-sizing: border-box;
+    }
+
+    .pic
+    {
+        width:20%;
+        box-shadow: 10px 10px 10px gray;
+        margin: 40px;
+        padding: 20px;
+    }
+
+    .fade
+    {
+        opacity: 0;
+
+    }
+
+    .fadeout
+    {
+        opacity: 1;
+        left: 10px;
+        transform: scale(1);
+    }
+
+    .hidetext
+    {
+        background: white;
+        width:100%;
+        padding:20px;
+        margin: 10px;
+        text-align: justify;
+        font-size: 15px;
+        opacity: 0;
+    }
+
+    .showtext
+    {
+        opacity: 1;
+    }
+</style>
+
+<script src="mylib.js"></script>
+<body>
+    
+    <h1>Scrolling Effect</h1>
+    <img id="p1" src="images/1.png" class="pic">
+    <img id="p2" src="images/2.png" class="pic">
+    <img id="p3" src="images/3.png" class="pic">
+    <img id="p4" src="images/4.png" class="pic">
+    <img id="p5" src="images/5.png" class="pic">
+    <img id="p6" src="images/6.png" class="pic">
+
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
+    </p>
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
+    </p>
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
+    </p>
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
+    </p>
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
+    </p>
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
+    </p>
+
+    <script>
+
+        var myp = document.querySelectorAll("img")
+        var p = document.querySelectorAll("p")
+
+        for(var i = 0;i<myp.length ; i++)
+            {
+                myp[i].classList.add("fade")
+            }
+
+            for(var i = 0;i<p.length ; i++)
+            {
+                p[i].classList.add("hidetext")
+            }
+
+            //document.title ="no error"
+
+            document.body.onscroll = function()
+            {
+                //document.title = pageYOffset
+                var sp = Math.round(pageYOffset)
+                document.title = sp
+
+                if(sp>50){ document.body.style.backgroundColor="yellow"}
+                if(sp>100){ document.body.style.background=""}
+                if(sp>200){ document.body.style.background=""
+                document.body.style.backgroundColor="black"}
+
+                if(sp>0)
+            {
+                myp[0].classList.add("fadeout")
+                myp[1].classList.add("fadeout")
+                myp[2].classList.add("fadeout")
+            }
+            if(sp>200)
+            {
+                myp[0].classList.remove("fadeout")
+                myp[1].classList.remove("fadeout")
+                myp[2].classList.remove("fadeout")
+                myp[3].classList.add("fadeout")
+                myp[4].classList.add("fadeout")
+                myp[5].classList.add("fadeout")
+            }
+
+            if(sp>400)
+            {
+                myp[3].classList.remove("fadeout")
+                myp[4].classList.remove("fadeout")
+                myp[5].classList.remove("fadeout")
+            }
+
+            if(sp>415)
+            {
+                p[0].classList.add("showtext")
+                p[1].classList.add("showtext")
+                p[2].classList.add("showtext")
+            }
+
+            if(sp>810)
+            {
+                p[0].classList.remove("hidetext")
+                p[1].classList.remove("hidetext")
+                p[2].classList.remove("hidetext")
+            }
+
+
+            }
+    </script>
+
+</body>
+</html>

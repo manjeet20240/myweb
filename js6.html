@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digtal Ads</title>
+</head>
+<body>
+    <script>
+
+
+        var d = document.createElement("div")
+        function show_add()
+
+        {
+            d.style = "position:absolute; top : 100px;left:0px text-align:center; padding:20px; border-radius: 20px; width:500px; height:500px;border:1px black solid;"
+
+            document.body.appendChild(d)
+            d.innerHTML= "<div id='b1' style='margin:10px;text-align:right;'><input type='button' value='x'></div><h1 style='color:brown; text-align:center;'>Digtal Ads</h1>"
+            d.innerHTML+= "<img style='width:100%;height:300px;'src='images/digiads.gif'>"
+
+            var a = document.getElementById("b1")
+
+            a.onclick = function()
+
+            {
+                document.body.removeChild(d)
+            }
+        }
+
+        setTimeout("show_add()",1000)
+
+        
+    </script>
+</body>
+</html>

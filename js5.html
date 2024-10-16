@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color change</title>
+</head>
+<style>
+    #red #blue #green{width: 100%;}
+
+</style>
+<body>
+    <button onClick="show()">show color box</button>
+    <button onClick="hide()">hide color box</button>
+
+<div id="box" style="display: none;margin: auto;color:white;font-size:20px;
+ text-align: center;height: 130px; box-shadow: 10px 10px 10px rgb(44, 41, 41);
+ border-radius: 10px;width: 15%;background: rgb(13,12,12);padding: 40px;">
+ 
+Set color
+<p></p>
+<input id="red" type="range" max="255" min="10" value="50">
+<input id="mgreen" type="range" max="255" min="10" value="50">
+<input id="blue" type="range" max="255" min="10" value="50">
+
+</div>
+
+<script>
+    var rr=50
+    var gg = 50
+    var bb = 50
+
+    var a = document.getElementById("red")
+    var b = document.getElementById("mgreen")
+    var c = document.getElementById("blue")
+    var box = document.getElementById("box")
+
+    a.onchange = function()
+    {
+      rr = a.value 
+      gg = b.value
+      bb = c.value
+      
+      document.body.style.background="rgb("+rr+","+gg+","+bb+")"
+      document.title ="rgb("+rr+","+gg+","+bb+")"
+    }
+
+    b.onchange = function()
+    {
+      rr = a.value 
+      gg = b.value
+      bb = c.value
+      
+      document.body.style.background="rgb("+rr+","+gg+","+bb+")"
+      document.title ="rgb("+rr+","+gg+","+bb+")"
+    }
+
+    c.onchange = function()
+    {
+      rr = a.value 
+      gg = b.value
+      bb = c.value
+      
+      document.body.style.background="rgb("+rr+","+gg+","+bb+")"
+      document.title ="rgb("+rr+","+gg+","+bb+")"
+    }
+
+    function show()
+    {
+        box.style.display = "block"
+    }
+
+    function hide()
+    {
+        box.style.display = "none"
+    }
+</script>
+
+</body>
+</html>

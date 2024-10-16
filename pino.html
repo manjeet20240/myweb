@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <h1 id="mes">Play with keyboard Event</h1>
+
+<script>
+    var m = document.getElementById("mes")
+    var k;
+    var s = new Audio("audio/a.mp3")
+    function f1(event)
+    {
+        event.preventDefault()
+        k = event.keyCode
+        m.innerHTML= "Code = "+ k+ " Charecter = "+ event.key
+        document.title = "key Code ="+k
+
+            switch(event.key)
+                    {
+                        case "A" :
+                        
+                        s.src = "audio/a.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "B" :
+                        
+                        s.src = "audio/d.mp3";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "C" :
+                        
+                        s.src = "audio/e.mp3";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "D" :
+                        
+                        s.src = "audio/f.mp3";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "E" :
+                        
+                        s.src = "audio/g.mp3";s.play()
+                        document.bgColor ="blue"
+                        break;
+
+                        case "F" :
+                        
+                        s.src = "audio/h.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "G" :
+                        
+                        s.src = "audio/j.mp3";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "H" :
+                        
+                        s.src = "audio/k.mp3";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "I" :
+                        
+                        s.src = "audio/l.mp3";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "J" :
+                        
+                        s.src = "audio/o.mp3";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "K" :
+                        
+                        s.src = "audio/p.wav";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "L" :
+                        
+                        s.src = "audio/s.wav";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "M" :
+                        
+                        s.src = "audio/t.wav";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "N" :
+                        
+                        s.src = "audio/u.wav";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "O" :
+                        
+                        s.src = "audio/w.wav";s.play()
+                        document.bgColor ="blue"
+                        break;
+
+                        case "P" :
+                        
+                        s.src = "audio/y.wav";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "Q" :
+                        
+                        s.src = "audio/a.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "R" :
+                        
+                        s.src = "audio/j.mp3";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "S" :
+                        
+                        s.src = "audio/k.mp3";s.play()
+                        document.bgColor ="bule"
+                        break;
+
+                        case "T" :
+                        
+                        s.src = "audio/l.mp3";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "U" :
+                        
+                        s.src = "audio/o.mp3";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "V" :
+                        
+                        s.src = "audio/a.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "W" :
+                        
+                        s.src = "audio/h.mp3";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "X" :
+                        
+                        s.src = "audio/g.mp3";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "Y" :
+                        
+                        s.src = "audio/f.mp3";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "Z" :
+                        
+                        s.src = "audio/a.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+                    }
+    }
+
+    document.body.addEventListoner("keypress",f1)
+    document.title ="Ready"
+</script>
+</body>
+</html>
