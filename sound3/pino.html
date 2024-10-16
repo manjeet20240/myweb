@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <h1 id="mes">Play with keyboard Event</h1>
+
+<script>
+    var m = document.getElementById("mes")
+    var k;
+    var s = new Audio("a.mp3")
+
+    function f1(event)
+    {
+        event.preventDefault()
+        k = event.keyCode
+        m.innerHTML= "Code = "+ k+ " Charecter = "+ event.key
+        document.title = "key Code ="+k
+
+            switch(event.key)
+                    {
+                        case "A" :
+                        
+                        s.src = "a.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "B" :
+                        
+                        s.src = "b.mp3";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "C" :
+                        
+                        s.src = "c.mp3";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "D" :
+                        
+                        s.src = "d.mp3";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "E" :
+                        
+                        s.src = "e.mp3";s.play()
+                        document.bgColor ="blue"
+                        break;
+
+                        case "F" :
+                        
+                        s.src = "f.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "G" :
+                        
+                        s.src = "g.mp3";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "H" :
+                        
+                        s.src = "h.mp3";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "I" :
+                        
+                        s.src = "i.mp3";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "J" :
+                        
+                        s.src = "j.mp3";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "K" :
+                        
+                        s.src = "k.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "L" :
+                        
+                        s.src = "l.mp3";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "M" :
+                        
+                        s.src = "m.wav";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "N" :
+                        
+                        s.src = "k.mp3";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "O" :
+                        
+                        s.src = "o.mp3";s.play()
+                        document.bgColor ="blue"
+                        break;
+
+                        case "P" :
+                        
+                        s.src = "p.wav";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "Q" :
+                        
+                        s.src = "k.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "R" :
+                        
+                        s.src = "a.mp3";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "S" :
+                        
+                        s.src = "s.wav";s.play()
+                        document.bgColor ="bule"
+                        break;
+
+                        case "T" :
+                        
+                        s.src = "t.wav";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "U" :
+                        
+                        s.src = "u.wav";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "V" :
+                        
+                        s.src = "b.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+
+                        case "W" :
+                        
+                        s.src = "w.wav";s.play()
+                        document.bgColor ="pink"
+                        break;
+
+                        case "X" :
+                        
+                        s.src = "c.mp3";s.play()
+                        document.bgColor ="green"
+                        break;
+
+                        case "Y" :
+                        
+                        s.src = "y.wav";s.play()
+                        document.bgColor ="yellow"
+                        break;
+
+                        case "Z" :
+                        
+                        s.src = "a.mp3";s.play()
+                        document.bgColor ="red"
+                        break;
+                    }
+    }
+
+document.body.addEventListener("keypress",f1)
+
+    document.title ="Ready"
+</script>
+</body>
+</html>
